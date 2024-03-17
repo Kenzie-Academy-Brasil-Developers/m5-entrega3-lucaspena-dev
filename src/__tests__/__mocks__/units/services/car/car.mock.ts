@@ -1,40 +1,41 @@
 const carMock = {
-  id: expect.any(String),
-  name: "Carro 1",
-  description: null,
-  brand: "Carro 1 marca",
-  year: 2021,
-  km: 0,
+  body: {
+    name: "Carro 1",
+    brand: "Ford",
+    year: 2022,
+    km: 0,
+  },
+  expectedValue: {
+    id: expect.any(String),
+    name: "Carro 1",
+    description: null,
+    brand: "Ford",
+    year: 2022,
+    km: 0,
+  },
 };
 
-const carCreateBodyMock = {
-  name: "Carro 1",
-  brand: "Carro 1 marca",
-  year: 2021,
-  km: 0,
-};
-
-const carUpdateBodyMock = {
-  description: "Carro 1 descrição",
+const carUpdateMock = {
+  description: "Tunado",
 };
 
 const carListMock = [
   {
     id: expect.any(String),
     name: "Carro 1",
-    description: null,
-    brand: "Carro 1 marca",
-    year: 2021,
+    description: "Tunado",
+    brand: "Ford",
+    year: 2022,
     km: 0,
   },
   {
     id: expect.any(String),
-    name: "Carro 1",
+    name: "Carro 2",
     description: null,
-    brand: "Carro 1 marca",
+    brand: "Toyota",
     year: 2021,
     km: 0,
   },
 ];
 
-export { carMock, carCreateBodyMock, carUpdateBodyMock, carListMock };
+export { carMock, carUpdateMock, carListMock };
