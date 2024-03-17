@@ -13,13 +13,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-// id - chave primária - uuid.
-// name - texto - obrigatório.
-// description - texto - opcional.
-// brand - texto - obrigatório.
-// year - número - obrigatório.
-// km - número - obrigatório.
-
 model Car {
   id          String  @id @default(uuid())
   name        String
