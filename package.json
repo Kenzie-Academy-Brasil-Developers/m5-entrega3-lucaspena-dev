@@ -1,0 +1,12 @@
+{
+  "name": "m5-entrega3-lucaspena-dev",
+  "version": "1.0.0",
+  "description": "Entrega 3 - Desenvolvendo e Testado uma API de Catálogo de Carros",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
