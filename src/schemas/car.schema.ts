@@ -13,4 +13,4 @@ const carCreateSchema = carSchema.omit({ id: true });
 const carUpdateSchema = carCreateSchema.partial();
 const carReturnSchema = carSchema;
 
-export { carSchema, carCreateSchema, carUpdateSchema, carReturnSchema };
+export { carCreateSchema, carUpdateSchema, carReturnSchema };
