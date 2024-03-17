@@ -1,4 +1,6 @@
+import "reflect-metadata";
 import { injectable } from "tsyringe";
+import { Car } from "@prisma/client";
 
 import {
   CarCreate,
@@ -14,25 +16,25 @@ export class CarServices implements CarServicesProps {
   async create(data: CarCreate): Promise<CarReturn> {
     const car = await prisma.car.create({ data });
 
-    return await carReturnSchema.parseAsync(car);
+    return car;
   }
 
   async read(): Promise<CarReturn[]> {
     const cars = await prisma.car.findMany();
 
-    return await carReturnSchema.array().parseAsync(cars);
+    return cars;
   }
 
   async readOne(id: string): Promise<CarReturn> {
-    const car = await prisma.car.findUnique({ where: { id } });
+    const car = (await prisma.car.findUnique({ where: { id } })) as Car;
 
-    return await carReturnSchema.parseAsync(car);
+    return car;
   }
 
   async update(id: string, data: CarUpdate): Promise<CarReturn> {
     const car = await prisma.car.update({ where: { id }, data });
 
-    return await carReturnSchema.parseAsync(car);
+    return car;
   }
 
   async delete(id: string): Promise<void> {
