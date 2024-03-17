@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "commit": "git add .; cz",
-    "dev": "dotenv -e .env.dev -- tsnd --respawn src/server.ts",
+
+    "dev": "dotenv -e .env.dev -- tsnd --cls --respawn src/server.ts",
     "migrate:dev": "dotenv -e .env.dev -- npx prisma migrate dev",
     "studio": "dotenv -e .env.dev -- npx prisma studio",
+
+    "test:unit": "dotenv -e .env.test -- jest --config jest.config.unit.ts --verbose --runInBand",
+    "test:integration": "dotenv -e .env.test -- jest --config jest.config.integration.ts --verbose --runInBand",
     "migrate:test": "dotenv -e .env.test -- npx prisma migrate dev"
   },
   "keywords": [],
