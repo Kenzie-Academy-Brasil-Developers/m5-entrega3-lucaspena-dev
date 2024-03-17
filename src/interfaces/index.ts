@@ -4,6 +4,7 @@ import {
   CarReturn,
   CarServicesProps,
   CarControllersProps,
+  CarDefaultSpecs,
 } from "./car.interface";
 
 export {
@@ -12,4 +13,5 @@ export {
   CarReturn,
   CarServicesProps,
   CarControllersProps,
+  CarDefaultSpecs,
 };

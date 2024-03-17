@@ -23,10 +23,13 @@ interface CarControllersProps {
   delete: (req: Request, res: Response) => Promise<Response>;
 }
 
+type CarDefaultSpecs = CarReturn;
+
 export {
   CarCreate,
   CarUpdate,
   CarReturn,
   CarServicesProps,
   CarControllersProps,
+  CarDefaultSpecs,
 };
