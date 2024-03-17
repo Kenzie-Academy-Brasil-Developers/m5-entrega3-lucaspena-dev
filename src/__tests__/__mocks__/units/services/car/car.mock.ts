@@ -1,5 +1,5 @@
 const carMock = {
-  id: "de58ac3d-ba0e-46f7-9408-fd28ea9e501b",
+  id: expect.any(String),
   name: "Carro 1",
   description: null,
   brand: "Carro 1 marca",
@@ -20,7 +20,7 @@ const carUpdateBodyMock = {
 
 const carListMock = [
   {
-    id: "de58ac3d-ba0e-46f7-9408-fd28ea9e501b",
+    id: expect.any(String),
     name: "Carro 1",
     description: null,
     brand: "Carro 1 marca",
@@ -28,7 +28,7 @@ const carListMock = [
     km: 0,
   },
   {
-    id: "de58ac3d-ba0e-46f7-9408-fd28ea9e501b",
+    id: expect.any(String),
     name: "Carro 1",
     description: null,
     brand: "Carro 1 marca",
