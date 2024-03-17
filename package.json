@@ -4,7 +4,10 @@
   "description": "Entrega 3 - Desenvolvendo e Testado uma API de Catálogo de Carros",
   "main": "index.js",
   "scripts": {
-    "commit": "git add .; cz"
+    "commit": "git add .; cz",
+    "dev": "dotenv -e .env.dev -- tsnd --respawn src/server.ts",
+    "migrate:dev": "dotenv -e .env.dev -- npx prisma migrate dev",
+    "migrate:test": "dotenv -e .env.test -- npx prisma migrate dev"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +27,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
+    "@prisma/client": "^5.11.0",
     "bcrypt": "^5.1.1",
     "dotenv-cli": "^7.4.1",
     "express": "^4.18.3",
