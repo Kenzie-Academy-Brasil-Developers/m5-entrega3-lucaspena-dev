@@ -13,22 +13,26 @@ import { carReturnSchema } from "../schemas";
 export class CarServices implements CarServicesProps {
   async create(data: CarCreate): Promise<CarReturn> {
     const car = await prisma.car.create({ data });
-    return carReturnSchema.parseAsync(car);
+
+    return await carReturnSchema.parseAsync(car);
   }
 
   async read(): Promise<CarReturn[]> {
     const cars = await prisma.car.findMany();
-    return carReturnSchema.array().parseAsync(cars);
+
+    return await carReturnSchema.array().parseAsync(cars);
   }
 
   async readOne(id: string): Promise<CarReturn> {
     const car = await prisma.car.findUnique({ where: { id } });
-    return carReturnSchema.parseAsync(car);
+
+    return await carReturnSchema.parseAsync(car);
   }
 
   async update(id: string, data: CarUpdate): Promise<CarReturn> {
     const car = await prisma.car.update({ where: { id }, data });
-    return carReturnSchema.parseAsync(car);
+
+    return await carReturnSchema.parseAsync(car);
   }
 
   async delete(id: string): Promise<void> {
