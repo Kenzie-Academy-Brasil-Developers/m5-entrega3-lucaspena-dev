@@ -3,7 +3,7 @@ import { prismaMock } from "../../../__mocks__/prisma";
 import { carMock } from "../../../__mocks__/units/services/car";
 import { carDefaultSpecs } from "../../../utils";
 
-describe("Unit tests: create car", () => {
+describe("Unit test: create car", () => {
   const { body, expectedValue } = carMock;
 
   afterAll(() => {
