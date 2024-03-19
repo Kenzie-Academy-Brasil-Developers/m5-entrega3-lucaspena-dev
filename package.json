@@ -5,11 +5,10 @@
   "main": "index.js",
   "scripts": {
     "commit": "git add .; cz",
-
     "dev": "dotenv -e .env.dev -- tsnd --cls --respawn src/server.ts",
     "migrate:dev": "dotenv -e .env.dev -- npx prisma migrate dev",
     "studio": "dotenv -e .env.dev -- npx prisma studio",
-    
+    "test": "dotenv -e .env.test -- jest --verbose --runInBand",
     "migrate:test": "dotenv -e .env.test -- npx prisma migrate dev"
   },
   "keywords": [],
