@@ -79,21 +79,17 @@ const carListMock = {
     },
   ],
 };
-
 const carUpdateMock = {
   body: {
-    name: "Carro 1",
-    brand: "Brand 1",
     description: "Description 1",
-    year: 2020,
-    km: 0,
+    year: 2024,
   },
   expectedValue: {
     id: expect.any(String),
     name: "Carro 1",
     description: "Description 1",
     brand: "Brand 1",
-    year: 2019,
+    year: 2024,
     km: 0,
   },
 };
