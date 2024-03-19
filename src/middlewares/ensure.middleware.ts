@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { container, injectable } from "tsyringe";
 import { NextFunction, Request, Response } from "express";
 import { AnyZodObject } from "zod";
@@ -8,12 +9,8 @@ import { AppError } from "../errors";
 @injectable()
 class EnsureMiddleware {
   validateBody(schema: AnyZodObject) {
-    return async (
-      { body }: Request,
-      _res: Response,
-      next: NextFunction
-    ): Promise<void> => {
-      body = await schema.parseAsync(body);
+    return (req: Request, _res: Response, next: NextFunction): void => {
+      req.body = schema.parse(req.body);
 
       return next();
     };
