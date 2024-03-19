@@ -9,7 +9,6 @@ import {
   CarUpdate,
 } from "../interfaces";
 import { prisma } from "../database/prisma";
-import { carReturnSchema } from "../schemas";
 
 @injectable()
 export class CarServices implements CarServicesProps {
