@@ -15,7 +15,7 @@ const carMock = {
   },
 };
 
-const carMockList = {
+const carListMock = {
   body: [
     {
       name: "Carro 1",
@@ -58,7 +58,7 @@ const carMockList = {
       name: "Carro 2",
       description: "Description 2",
       brand: "Brand 2",
-      year: 2021,
+      year: 2019,
       km: 0,
     },
     {
@@ -98,4 +98,4 @@ const carUpdateMock = {
   },
 };
 
-export { carMock, carMockList, carUpdateMock };
+export { carMock, carListMock, carUpdateMock };
