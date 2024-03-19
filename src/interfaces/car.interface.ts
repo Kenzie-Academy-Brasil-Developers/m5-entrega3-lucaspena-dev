@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { Request, Response } from "express";
+import { Car } from "@prisma/client";
 
 import { carCreateSchema, carUpdateSchema, carReturnSchema } from "../schemas";
 
@@ -23,7 +24,7 @@ interface CarControllersProps {
   delete: (req: Request, res: Response) => Promise<Response>;
 }
 
-type CarDefaultSpecs = CarReturn;
+type CarDefaultSpecs = Car;
 
 export {
   CarCreate,
