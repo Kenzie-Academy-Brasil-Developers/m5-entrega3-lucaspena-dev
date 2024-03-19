@@ -1,3 +1,4 @@
 import { request } from "./request";
+import { carDefaultSpecs } from "./defaultSpecs";
 
-export { request };
+export { request, carDefaultSpecs };
