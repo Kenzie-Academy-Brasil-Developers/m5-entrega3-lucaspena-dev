@@ -44,7 +44,7 @@ const carMockList = {
       km: 0,
     },
   ],
-  expectedValue: [
+  expectedValues: [
     {
       id: expect.any(String),
       name: "Carro 1",
