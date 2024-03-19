@@ -27,10 +27,10 @@ describe("Unit tests: Read one car service", () => {
     carDefaultSpecs(received, expectedValue);
   });
 
-  test("Should not be able to read a car with a non-existent id", async () => {
+  test("Should not be able to read a car with a invalid id", async () => {
     const carServices = new CarServices().readOne;
 
-    expect(async () => await carServices("non-existent-id")).rejects.toThrow(
+    expect(async () => await carServices("invalid-id")).rejects.toThrow(
       new ZodError([
         {
           code: "invalid_type",

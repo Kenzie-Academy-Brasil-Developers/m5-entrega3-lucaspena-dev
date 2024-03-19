@@ -25,7 +25,7 @@ describe("Unit tests: Create car service", () => {
     carDefaultSpecs(received, expectedValue);
   });
 
-  test("Should not be able to create a car with invalid data", async () => {
+  test("Should not be able to create a car with invalid body", async () => {
     const carServices = new CarServices().create;
 
     expect(async () => {
