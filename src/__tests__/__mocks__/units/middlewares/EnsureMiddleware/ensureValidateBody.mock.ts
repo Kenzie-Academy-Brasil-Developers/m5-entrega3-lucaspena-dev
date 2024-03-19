@@ -17,7 +17,6 @@ const validBodyMock = {
   },
   expectedValue: {
     name: "Carro 1",
-    description: null,
     brand: "Brand 1",
     year: 2020,
     km: 0,
