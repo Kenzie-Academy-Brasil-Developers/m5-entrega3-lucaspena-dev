@@ -9,31 +9,32 @@ import {
   CarUpdate,
 } from "../interfaces";
 import { prisma } from "../database/prisma";
+import { carReturnSchema } from "../schemas";
 
 @injectable()
 export class CarServices implements CarServicesProps {
   async create(data: CarCreate): Promise<CarReturn> {
     const car = await prisma.car.create({ data });
 
-    return car;
+    return carReturnSchema.parse(car);
   }
 
   async read(): Promise<CarReturn[]> {
     const cars = await prisma.car.findMany();
 
-    return cars;
+    return carReturnSchema.array().parse(cars);
   }
 
   async readOne(id: string): Promise<CarReturn> {
     const car = (await prisma.car.findUnique({ where: { id } })) as Car;
 
-    return car;
+    return carReturnSchema.parse(car);
   }
 
   async update(id: string, data: CarUpdate): Promise<CarReturn> {
     const car = await prisma.car.update({ where: { id }, data });
 
-    return car;
+    return carReturnSchema.parse(car);
   }
 
   async delete(id: string): Promise<void> {
