@@ -1,11 +1,11 @@
 import { ZodError, z } from "zod";
 
-const validSchemaMock = {
+const validSchemaMock = z.object({
   name: z.string(),
   brand: z.string(),
   year: z.number().gte(1900).lte(2024),
   km: z.number().gte(0).lte(100000),
-};
+});
 
 const validBodyMock = {
   body: {
