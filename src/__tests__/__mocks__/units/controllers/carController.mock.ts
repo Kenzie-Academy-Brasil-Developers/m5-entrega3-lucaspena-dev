@@ -110,7 +110,7 @@ const carUpdateControllerMock = {
   },
   expectedValue: {
     id: expect.any(String),
-    name: "Carro 1",
+    name: "Carro 5",
     description: "Description 1",
     brand: "Brand 1",
     year: 2024,
