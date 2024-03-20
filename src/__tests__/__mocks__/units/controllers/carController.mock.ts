@@ -126,7 +126,6 @@ const carDeleteControllerMock = {
     year: 2020,
     km: 0,
   },
-  expectedValue: null,
 };
 
 export {
