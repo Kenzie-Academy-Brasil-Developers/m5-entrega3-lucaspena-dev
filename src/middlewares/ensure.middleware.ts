@@ -16,8 +16,8 @@ class EnsureMiddleware {
     };
   }
 
-  async isCarIdValid({ params }: Request, _res: Response, next: NextFunction) {
-    const { id } = params;
+  async isCarIdValid(req: Request, _res: Response, next: NextFunction) {
+    const { id } = req.params;
     const car = await prisma.car.findUnique({ where: { id } });
 
     if (!car) throw new AppError(404, "Car not found.");
